@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -14,8 +15,11 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class RegActivityTwo extends AppCompatActivity {
 
@@ -28,7 +32,8 @@ public class RegActivityTwo extends AppCompatActivity {
     public String usernameText, passwordText, emailText, mobileNoText, iitbRollNoText, dobText;
 
     FirebaseDatabase rootNode;
-    DatabaseReference reference, reference2;
+    DatabaseReference reference; //reference2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +43,7 @@ public class RegActivityTwo extends AppCompatActivity {
         username=(EditText)findViewById(R.id.name);
         password=(EditText)findViewById(R.id.password);
         email=(EditText)findViewById(R.id.email);
-        mobileNo=(EditText)findViewById(R.id.mobileNo);
+        //mobileNo=(EditText)findViewById(R.id.phone);
         iitbRollNo=(EditText)findViewById(R.id.iitbroll);
         dob=(EditText)findViewById(R.id.dob);
 
@@ -55,10 +60,13 @@ public class RegActivityTwo extends AppCompatActivity {
         usernameText=username.getText().toString();
         passwordText=password.getText().toString();
         emailText=email.getText().toString();
-        mobileNoText=mobileNo.getText().toString();
+
+        Intent regIntent=getIntent();
+        mobileNoText=regIntent.getStringExtra("mobileText");
         iitbRollNoText=iitbRollNo.getText().toString();
         dobText=dob.getText().toString();
 
+//        submitBtn.setEnabled(false);
 
 
 
@@ -67,33 +75,70 @@ public class RegActivityTwo extends AppCompatActivity {
             public void onClick(View v) {
                 rootNode=FirebaseDatabase.getInstance();
                 reference=rootNode.getReference("userDetails");
-                reference2=rootNode.getReference("mobileNumber");
+                //reference2=rootNode.getReference("mobileNumber");
 
 
                 usernameText=username.getText().toString();
                 passwordText=password.getText().toString();
                 emailText=email.getText().toString();
-                mobileNoText=mobileNo.getText().toString();
+                Intent regIntent=getIntent();
+                mobileNoText=regIntent.getStringExtra("mobileText");
                 iitbRollNoText=iitbRollNo.getText().toString();
                 dobText=dob.getText().toString();
 
                 if (usernameText.isEmpty() || passwordText.isEmpty() || emailText.isEmpty() || dobText.isEmpty() || mobileNoText.isEmpty() || iitbRollNoText.isEmpty()) {
                     Toast.makeText(RegActivityTwo.this, "Please Enter All the Details",Toast.LENGTH_LONG).show();
-                    return;
+                }
+
+                else if (tnc.isChecked()==false){
+                    Toast.makeText(RegActivityTwo.this, "PLease Accept TnC", Toast.LENGTH_LONG).show();
                 }
                 else {
 
-                    Users userDetail = new Users(usernameText, mobileNoText, emailText, dobText, iitbRollNoText, passwordText);
-                    reference2.setValue(mobileNoText);
-                    reference.child(mobileNoText).setValue(userDetail).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    DatabaseReference mobileNoRef=reference.child(mobileNoText);
+                    ValueEventListener eventListener=new ValueEventListener() {
                         @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            Toast.makeText(RegActivityTwo.this, "Registration Successful", Toast.LENGTH_LONG).show();
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if (!dataSnapshot.exists()){
+                                Users userDetail = new Users(usernameText, mobileNoText, emailText, dobText, iitbRollNoText, passwordText, false);
+                                reference.child(mobileNoText).setValue(userDetail).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        Toast.makeText(RegActivityTwo.this, "Registration Successful", Toast.LENGTH_LONG).show();
+                                        //reference2.child(mobileNoText).setValue(false);
+                                        startActivity(new Intent(RegActivityTwo.this, Interest_Part.class));
+
+
+                                    }
+                                });
+
+
+                            }
+                            else {
+                                Toast.makeText(RegActivityTwo.this, "Mobile Number already Registered", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            Log.d("Tag", databaseError.getMessage());
 
                         }
-                    });
+                    };
+                    mobileNoRef.addListenerForSingleValueEvent(eventListener);
 
-                    startActivity(new Intent(RegActivityTwo.this, Interest_Part.class));
+//                    Users userDetail = new Users(usernameText, mobileNoText, emailText, dobText, iitbRollNoText, passwordText, false);
+//                    reference.child(mobileNoText).setValue(userDetail).addOnCompleteListener(new OnCompleteListener<Void>() {
+//                        @Override
+//                        public void onComplete(@NonNull Task<Void> task) {
+//                            Toast.makeText(RegActivityTwo.this, "Registration Successful", Toast.LENGTH_LONG).show();
+//                            reference2.child(mobileNoText).setValue(false);
+//                            startActivity(new Intent(RegActivityTwo.this, Interest_Part.class));
+//
+//
+//                        }
+//                    });
+
 
                 }
 
@@ -105,16 +150,23 @@ public class RegActivityTwo extends AppCompatActivity {
 
 
     }
+//
+//    private void tncOnclickListener(){
+//        tnc.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (tnc.isChecked()){
+//                    submitBtn.setEnabled(true);
+//                }
+//                else {
+//                    submitBtn.setEnabled(false);
+//                }
+//            }
+//        });
+//    }
 
-    private boolean validate(){
-        if (usernameText.isEmpty() || passwordText.isEmpty() || emailText.isEmpty() || dobText.isEmpty() || mobileNoText.isEmpty() || iitbRollNoText.isEmpty()) {
-            Toast.makeText(RegActivityTwo.this, "Please Enter All the Details",Toast.LENGTH_LONG).show();
-            return false;
-        }
-        else{
-            return true;
-        }
-    }
+
+
 
 
 }

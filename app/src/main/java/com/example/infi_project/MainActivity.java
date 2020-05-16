@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         if(user!=null)
         {
             finish();
-            startActivity(new Intent(MainActivity.this,SecondActivity.class));
+            startActivity(new Intent(MainActivity.this,AppMainPage.class));
         }
 
 
@@ -190,7 +190,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Signupp(){
-        Intent inten = new Intent(this, RegActivityTwo.class);
+        Intent inten = new Intent(this, MobileOtp.class);
         startActivity(inten);
     }
 
@@ -257,7 +257,7 @@ public class MainActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
 
                             progressDialog.dismiss();
-                            startActivity(new Intent(MainActivity.this, SecondActivity.class));
+                            startActivity(new Intent(MainActivity.this, AppMainPage.class));
                             Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
 
 

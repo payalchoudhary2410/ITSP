@@ -10,17 +10,19 @@ class Users {
     String dateofBirth;
     String rollno;
     String pass;
+    boolean choiceSelected;
 
     public Users() {
     }
 
-    public Users(String userName, String userPhone, String userEmail, String dateofBirth, String rollno, String pass) {
+    public Users(String userName, String userPhone, String userEmail, String dateofBirth, String rollno, String pass, boolean choiceSelected) {
         this.userName = userName;
         this.userPhone = userPhone;
         this.userEmail = userEmail;
         this.dateofBirth = dateofBirth;
         this.rollno = rollno;
         this.pass = pass;
+        this.choiceSelected=choiceSelected;
     }
 
     public String getUserName() {
@@ -69,5 +71,13 @@ class Users {
 
     public void setPass(String pass) {
         this.pass = pass;
+    }
+
+    public boolean isChoiceSelected() {
+        return choiceSelected;
+    }
+
+    public void setChoiceSelected(boolean choiceSelected) {
+        this.choiceSelected = choiceSelected;
     }
 }

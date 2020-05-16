@@ -7,6 +7,21 @@
     android:background="@drawable/back0"
     tools:context=".RegActivityTwo">
 
+    <TextView
+        android:id="@+id/textViewIntro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Help us to know you better"
+        android:textColor="#FFFFFE"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:foregroundGravity="center"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/iitbroll"
         android:layout_width="235dp"
@@ -16,9 +31,8 @@
         android:hint="IITB Roll No."
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <EditText
         android:id="@+id/name"
@@ -26,13 +40,12 @@
         android:layout_height="51dp"
         android:ems="10"
         android:hint="Name"
+        android:layout_marginTop="30dp"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.065" />
+        app:layout_constraintBottom_toTopOf="@id/email"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewIntro" />
 
     <EditText
         android:id="@+id/email"
@@ -51,7 +64,7 @@
         android:id="@+id/password"
         android:layout_width="235dp"
         android:layout_height="51dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="25dp"
         android:ems="10"
         android:hint="password"
         android:inputType="textPassword"
@@ -64,11 +77,11 @@
         android:id="@+id/signupBtn"
         android:layout_width="113dp"
         android:layout_height="46dp"
-        android:layout_marginTop="324dp"
+        android:layout_marginTop="75dp"
         android:text="Sign Up2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/dob" />
 
     <TextView
         android:id="@+id/logInPage"
@@ -98,17 +111,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logInPage" />
 
-    <EditText
-        android:id="@+id/mobileNo"
 
-        android:layout_width="235dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="25dp"
-        android:ems="10"
-        android:hint="Mobile No."
-        android:inputType="phone"
-        app:layout_constraintStart_toStartOf="@+id/password"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <EditText
         android:id="@+id/dob"
