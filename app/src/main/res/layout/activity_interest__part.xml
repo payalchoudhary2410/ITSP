@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#070707"
+    tools:context=".Interest_Part">
+
+    <TextView
+        android:id="@+id/startText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Lets start your journey"
+        android:textColor="#FFFEFE"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_submitInterest"
+        app:layout_constraintTop_toTopOf="@id/startText">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+
+            <ImageButton
+                android:id="@+id/ig1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:contentDescription="Art"
+                android:foregroundGravity="center"
+                android:src="@drawable/artandcraftimage"
+                android:tag="1"
+                android:visibility="visible"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/ig2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/ig3"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/careerandbusinessimage"
+                android:tag="3"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/ig4"
+                app:layout_constraintTop_toBottomOf="@id/ig1" />
+
+            <ImageButton
+                android:id="@+id/ig5"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/cultureimage"
+                android:tag="5"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/ig6"
+                app:layout_constraintTop_toBottomOf="@id/ig3" />
+
+            <ImageButton
+                android:id="@+id/ig7"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/danceimage"
+                android:tag="7"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/ig8"
+                app:layout_constraintTop_toBottomOf="@id/ig5" />
+
+            <ImageButton
+                android:id="@+id/ig9"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/filmimage"
+                android:tag="9"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/ig10"
+                app:layout_constraintTop_toBottomOf="@id/ig7" />
+
+            <ImageButton
+                android:id="@+id/ig11"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/fooddrinksimage"
+                android:tag="11"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/ig12"
+                app:layout_constraintTop_toBottomOf="@id/ig9" />
+
+            <ImageButton
+                android:id="@+id/ig13"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/healthandwellnessimage"
+                android:tag="13"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/ig14"
+                app:layout_constraintTop_toBottomOf="@id/ig11" />
+
+            <ImageButton
+                android:id="@+id/ig15"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/languageimage"
+                android:tag="15"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/ig16"
+                app:layout_constraintTop_toBottomOf="@id/ig13" />
+
+            <ImageButton
+                android:id="@+id/ig17"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/learningimage"
+                android:tag="17"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/ig18"
+                app:layout_constraintTop_toBottomOf="@id/ig15" />
+
+            <ImageButton
+                android:id="@+id/ig19"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/literatureimage"
+                android:tag="19"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/ig20"
+                app:layout_constraintTop_toBottomOf="@id/ig17" />
+
+            <ImageButton
+                android:id="@+id/ig21"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/musicimage"
+                android:tag="21"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tickRef"
+                app:layout_constraintTop_toBottomOf="@id/ig19" />
+
+
+            <ImageButton
+                android:id="@+id/ig2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/booksimage"
+                android:tag="2"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintLeft_toRightOf="@id/ig1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageButton
+                android:id="@+id/ig4"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/fashionimage"
+                android:tag="4"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintLeft_toRightOf="@id/ig3"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ig2" />
+
+            <ImageButton
+                android:id="@+id/ig6"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/outdooradventuretravelimage"
+                android:tag="6"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintLeft_toRightOf="@id/ig5"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ig4" />
+
+            <ImageButton
+                android:id="@+id/ig8"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/petsimage"
+                android:tag="8"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintLeft_toRightOf="@id/ig7"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ig6" />
+
+            <ImageButton
+                android:id="@+id/ig10"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/photographyimage"
+                android:tag="10"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintLeft_toRightOf="@id/ig9"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ig8" />
+
+            <ImageButton
+                android:id="@+id/ig12"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/scifiandgamesimage"
+                android:tag="12"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintLeft_toRightOf="@id/ig11"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ig10" />
+
+            <ImageButton
+                android:id="@+id/ig14"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/socialimage"
+                android:tag="14"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintLeft_toRightOf="@id/ig13"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ig12" />
+
+            <ImageButton
+                android:id="@+id/ig16"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/sportsandfitnessimage"
+                android:tag="16"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintLeft_toRightOf="@id/ig15"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ig14" />
+
+            <ImageButton
+                android:id="@+id/ig18"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/tech"
+                android:tag="18"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintLeft_toRightOf="@id/ig17"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ig16" />
+
+            <ImageButton
+                android:id="@+id/ig20"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/writingimage"
+                android:tag="20"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintLeft_toRightOf="@id/ig19"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ig18" />
+
+            <ImageButton
+                android:id="@+id/tickRef"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/tick"
+                android:tag="22"
+                android:translationZ="15dp"
+                android:elevation="15dp"
+                android:stateListAnimator="@null"
+                android:visibility="invisible"
+                app:layout_constraintLeft_toRightOf="@id/ig21"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ig20" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button_submitInterest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_horizontal"
+        android:text="submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollContent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
