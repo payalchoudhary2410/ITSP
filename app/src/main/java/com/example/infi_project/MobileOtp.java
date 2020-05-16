@@ -31,8 +31,7 @@ import java.util.concurrent.TimeUnit;
 
 public class MobileOtp extends AppCompatActivity {
     FirebaseAuth fAuth;
-    String phoneNumber = "+917451221244";
-    String otpCode = "123456";
+    String otpCode;
     String verificationId;
     EditText phone,optEnter;
     Button next;
@@ -100,7 +99,7 @@ public class MobileOtp extends AppCompatActivity {
 
                                 }
                                 else {
-                                    Toast.makeText(MobileOtp.this, "Mobile Number already Registered", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(MobileOtp.this, "Mobile Number already Registered", Toast.LENGTH_LONG).show();
                                     startActivity(new Intent(MobileOtp.this, MainActivity.class));
                                     finish();
                                 }

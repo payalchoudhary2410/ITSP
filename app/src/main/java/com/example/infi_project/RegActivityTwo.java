@@ -61,8 +61,11 @@ public class RegActivityTwo extends AppCompatActivity {
         passwordText=password.getText().toString();
         emailText=email.getText().toString();
 
+        //take mobile no. from previous activity
         Intent regIntent=getIntent();
         mobileNoText=regIntent.getStringExtra("mobileText");
+
+
         iitbRollNoText=iitbRollNo.getText().toString();
         dobText=dob.getText().toString();
 
@@ -106,7 +109,9 @@ public class RegActivityTwo extends AppCompatActivity {
                                     public void onComplete(@NonNull Task<Void> task) {
                                         Toast.makeText(RegActivityTwo.this, "Registration Successful", Toast.LENGTH_LONG).show();
                                         //reference2.child(mobileNoText).setValue(false);
-                                        startActivity(new Intent(RegActivityTwo.this, Interest_Part.class));
+                                        Intent interestIntent =new Intent(RegActivityTwo.this, Interest_Part.class);
+                                        interestIntent.putExtra("mobileText", mobileNoText);
+                                        startActivity(interestIntent);
 
 
                                     }
