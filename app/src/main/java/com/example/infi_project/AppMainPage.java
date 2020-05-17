@@ -1,19 +1,28 @@
 package com.example.infi_project;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.example.infi_project.data.ChatTab;
 import com.example.infi_project.data.ExploreTab;
 import com.example.infi_project.data.FeedTab;
 import com.example.infi_project.data.ProfileTab;
 import com.google.android.material.tabs.TabLayout;
-
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 public class AppMainPage extends AppCompatActivity {
@@ -23,6 +32,9 @@ public class AppMainPage extends AppCompatActivity {
     public ViewPager viewPager;
     public Toolbar toolbar;
     PagerAdapter pagerAdapter;
+    ProgressBar progressBar;
+
+    String mobileText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +46,53 @@ public class AppMainPage extends AppCompatActivity {
         viewPager=findViewById(R.id.pager);
         pagerAdapter=new PagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(pagerAdapter);
+        progressBar=findViewById(R.id.progressBarApp);
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Infi");
 
 
         tabLayout.setupWithViewPager(viewPager);
+
+        Intent appMainPage_intent=getIntent();
+        mobileText=appMainPage_intent.getStringExtra("mobileText");
+
+        DatabaseReference reff;
+        reff= FirebaseDatabase.getInstance().getReference().child("userDetails").child(mobileText);
+        reff.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.child("choiceSelected").getValue()!=null) {
+                    String interestSelected=dataSnapshot.child("choiceSelected").getValue().toString();
+                    if (interestSelected != "true") {
+                        Intent appMainPage_intent = new Intent(AppMainPage.this, Interest_Part.class);
+                        appMainPage_intent.putExtra("mobileText", mobileText);
+                        startActivity(appMainPage_intent);
+                        finish();
+                    } else {
+//                    Intent interest_intent= new Intent(AppMainPage.this, Interest_Part.class);
+//                    Toast.makeText(AppMainPage.this, interestSelected+"aaaaaa", Toast.LENGTH_LONG).show();
+//                    interest_intent.putExtra("mobileText", mobileText);
+//                    startActivity(interest_intent);
+//                    finish();
+                        progressBar.setVisibility(View.GONE);
+                        viewPager.setVisibility(View.VISIBLE);
+
+
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+
+
+            }
+
+        });
+
+
 //        tabLayout=(TabLayout)findViewById(R.id.tabLayout);
 //        tabLayout.addTab(tabLayout.newTab().setText("Feed"));
 //        tabLayout.addTab(tabLayout.newTab().setText("Chat"));

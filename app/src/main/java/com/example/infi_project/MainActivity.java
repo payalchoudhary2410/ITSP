@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     String verificationId;
     public String phoneNum;
     DatabaseReference user;
-    String interestSelected;
+//    String interestSelected;
     DatabaseReference mobileNoRef;
 
 
@@ -78,6 +78,8 @@ public class MainActivity extends AppCompatActivity {
         String phoneText=phone.getText().toString();
         phoneNum = "+"+countryCodePicker.getSelectedCountryCode()+phoneText;
         mobileNoRef=user.child(phoneNum);
+
+
 
 
         resend.setOnClickListener(new View.OnClickListener() {
@@ -114,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                                     progressBar.setVisibility(View.VISIBLE);
                                     state.setText("Sending OTP");
                                     state.setVisibility(View.VISIBLE);
-                                    interestSelected=dataSnapshot.child(phoneNum2).child("choiceSelected").getValue(String.class);
+                                    //interestSelected=dataSnapshot.child(phoneNum2).child("choiceSelected").getValue().toString();
                                     Log.d("phone", "Phone No.: " + phoneNum2);
                                     requestPhoneAuth(phoneNum2);
 
@@ -122,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
 
                                 }
                                 else {
-                                    Toast.makeText(MainActivity.this, "Mobile Number not Registered", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(MainActivity.this, "Mobile Number not Registered", Toast.LENGTH_SHORT).show();
                                     next.setEnabled(true);
                                 }
                             }
@@ -201,24 +203,54 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void verifyAuth(PhoneAuthCredential credential) {
+        //String interestSelected;
         fAuth.signInWithCredential(credential).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Toast.makeText(MainActivity.this, "Phone Verified."+fAuth.getCurrentUser().getUid(), Toast.LENGTH_SHORT).show();
-                    if (interestSelected== "true"){
-                        Intent appMainPage_intent= new Intent(MainActivity.this, AppMainPage.class);
-                        appMainPage_intent.putExtra("mobileText", phoneNum);
-                        startActivity(appMainPage_intent);
-                        finish();
-                    }
-                    else {
-                        Intent interest_intent= new Intent(MainActivity.this, Interest_Part.class);
-                        interest_intent.putExtra("mobileText", phoneNum);
-                        startActivity(interest_intent);
-                        finish();
+                    Toast.makeText(MainActivity.this, "Phone Verified.", Toast.LENGTH_SHORT).show();
+//                    DatabaseReference reff;
+//                    reff=FirebaseDatabase.getInstance().getReference().child("userDetails").child(phoneNum);
+//                    reff.addValueEventListener(new ValueEventListener() {
+//                        @Override
+//                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                            String interestSelected=dataSnapshot.child("choiceSelected").getValue().toString();
+//                            if (interestSelected== "true"){
+                                Intent appMainPage_intent= new Intent(MainActivity.this, AppMainPage.class);
+                                appMainPage_intent.putExtra("mobileText", phoneNum);
+                                startActivity(appMainPage_intent);
+                                finish();
+//                            }
+//                            else {
+//                                Intent interest_intent= new Intent(MainActivity.this, Interest_Part.class);
+//                                Toast.makeText(MainActivity.this, interestSelected+"aaaaaa", Toast.LENGTH_LONG).show();
+//                                interest_intent.putExtra("mobileText", phoneNum);
+//                                startActivity(interest_intent);
+//                                finish();
+//
+//                            }
+//                        }
+//
+//                        @Override
+//                        public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//                        }
+//                    });
 
-                    }
+//                    if (interestSelected== "true"){
+//                        Intent appMainPage_intent= new Intent(MainActivity.this, AppMainPage.class);
+//                        appMainPage_intent.putExtra("mobileText", phoneNum);
+//                        startActivity(appMainPage_intent);
+//                        finish();
+//                    }
+//                    else {
+//                        Intent interest_intent= new Intent(MainActivity.this, Interest_Part.class);
+//                        Toast.makeText(MainActivity.this, interestSelected, Toast.LENGTH_LONG).show();
+//                        interest_intent.putExtra("mobileText", phoneNum);
+//                        startActivity(interest_intent);
+//                        finish();
+//
+//                    }
                 }else {
                     progressBar.setVisibility(View.GONE);
                     state.setVisibility(View.GONE);
@@ -228,9 +260,41 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-//    @Override
-//    protected void onStart() {
-//        super.onStart();
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseAuth.AuthStateListener mAuthStateListener;
+
+        mAuthStateListener=new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser mFirebaseUser= fAuth.getCurrentUser();
+                if (mFirebaseUser!=null){
+                    final String mobileNo=mFirebaseUser.getPhoneNumber();
+
+                    //Query checkUser= user.orderByChild("userPhone").equalTo(mobileNo);
+                    //checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
+                    //@Override
+                    //public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    //String interestSelected=dataSnapshot.child(mobileNo).child("choiceSelected").getValue(String.class);
+                    // if (interestSelected=="true"){
+                    Intent appMainPage_intent=new Intent(MainActivity.this, AppMainPage.class);
+                    appMainPage_intent.putExtra("mobileText", mobileNo);
+                    startActivity(appMainPage_intent);
+                    finish();
+                    //}
+                    //}
+
+//                        @Override
+//                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+//                        }
+//                    });
+
+                }
+            }
+        };
+        fAuth.addAuthStateListener(mAuthStateListener);
 //        FirebaseUser user=fAuth.getCurrentUser();
 //        if(user != null){
 //            progressBar.setVisibility(View.VISIBLE);
@@ -275,8 +339,8 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //
 //        }
-//
-//    }
+
+    }
 
     public void SignUpSetOnClickListener(){
         signUp.setOnClickListener(new View.OnClickListener() {

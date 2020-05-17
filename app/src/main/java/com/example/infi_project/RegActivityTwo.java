@@ -15,11 +15,14 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.Vector;
 
 public class RegActivityTwo extends AppCompatActivity {
 
@@ -30,6 +33,7 @@ public class RegActivityTwo extends AppCompatActivity {
     public TextView logIn, contactUs,tncStatement;
 
     public String usernameText, passwordText, emailText, mobileNoText, iitbRollNoText, dobText;
+    public Vector userInterest=new Vector();
 
     FirebaseDatabase rootNode;
     DatabaseReference reference; //reference2;
@@ -46,6 +50,8 @@ public class RegActivityTwo extends AppCompatActivity {
         //mobileNo=(EditText)findViewById(R.id.phone);
         iitbRollNo=(EditText)findViewById(R.id.iitbroll);
         dob=(EditText)findViewById(R.id.dob);
+
+
 
         tnc=(CheckBox)findViewById(R.id.checkBoxTnC);
 
@@ -103,7 +109,7 @@ public class RegActivityTwo extends AppCompatActivity {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             if (!dataSnapshot.exists()){
-                                Users userDetail = new Users(usernameText, mobileNoText, emailText, dobText, iitbRollNoText, passwordText, false);
+                                Users userDetail = new Users(usernameText, mobileNoText, emailText, dobText, iitbRollNoText, passwordText, false,userInterest);
                                 reference.child(mobileNoText).setValue(userDetail).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
@@ -112,6 +118,7 @@ public class RegActivityTwo extends AppCompatActivity {
                                         Intent interestIntent =new Intent(RegActivityTwo.this, Interest_Part.class);
                                         interestIntent.putExtra("mobileText", mobileNoText);
                                         startActivity(interestIntent);
+                                        finish();
 
 
                                     }
@@ -153,7 +160,28 @@ public class RegActivityTwo extends AppCompatActivity {
         });
 
 
+        loginSetListener();
+        contactSetListener();
+    }
 
+    public void loginSetListener(){
+        FirebaseAuth.getInstance().signOut();
+        logIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RegActivityTwo.this, MainActivity.class));
+                finish();
+            }
+        });
+    }
+
+    public void contactSetListener(){
+        contactUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RegActivityTwo.this, Contact_Us.class));
+            }
+        });
     }
 //
 //    private void tncOnclickListener(){

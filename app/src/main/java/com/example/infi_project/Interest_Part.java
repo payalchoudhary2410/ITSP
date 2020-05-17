@@ -16,6 +16,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Vector;
+
 public class Interest_Part extends AppCompatActivity {
     public ImageButton[] igButton=new ImageButton[22];
     //public ImageButton ig3;
@@ -23,6 +25,7 @@ public class Interest_Part extends AppCompatActivity {
     public int totalSelected;
     private Button subBtn;
     String mobileText;
+    public Vector userInterest=new Vector();
 
 
 
@@ -66,7 +69,7 @@ public class Interest_Part extends AppCompatActivity {
                     new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            if (selectigButton[j]==false){
+                            if (!selectigButton[j]){
                                 selectigButton[j]=true;
                                 igButton[j].setImageAlpha(64);
                                 igButton[j].setAlpha(0.25f);
@@ -101,14 +104,15 @@ public class Interest_Part extends AppCompatActivity {
 
                         for (int i=1; i<22; i++){
                             final String b= "ig"+i;
-                            Interest interestDetails= new Interest(mobileText,"qw");
+                            Interest interestDetails= new Interest("qw",mobileText);
                             if (selectigButton[i]){
                                 interests.child(b).child(mobileText).setValue(interestDetails);
-
+                                userInterest.add(b);
                             }
                         }
 
                         user.child(mobileText).child("choiceSelected").setValue(true);
+                        user.child(mobileText).child("userInterest").setValue(userInterest);
 
                         Intent appMainPage_intent = new Intent(Interest_Part.this, AppMainPage.class);
                         appMainPage_intent.putExtra("mobileText", mobileText);
