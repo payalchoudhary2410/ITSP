@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     public String phoneNum;
     DatabaseReference user;
 //    String interestSelected;
-    DatabaseReference mobileNoRef;
+    //DatabaseReference mobileNoRef;
 
 
 
@@ -77,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
 
         String phoneText=phone.getText().toString();
         phoneNum = "+"+countryCodePicker.getSelectedCountryCode()+phoneText;
-        mobileNoRef=user.child(phoneNum);
 
 
 
@@ -282,6 +281,8 @@ public class MainActivity extends AppCompatActivity {
                     appMainPage_intent.putExtra("mobileText", mobileNo);
                     startActivity(appMainPage_intent);
                     finish();
+                    finishAffinity();
+                    finishAndRemoveTask();
                     //}
                     //}
 

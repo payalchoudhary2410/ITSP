@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -18,6 +19,7 @@ import com.example.infi_project.data.ExploreTab;
 import com.example.infi_project.data.FeedTab;
 import com.example.infi_project.data.ProfileTab;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -65,9 +67,9 @@ public class AppMainPage extends AppCompatActivity {
                 if (dataSnapshot.child("choiceSelected").getValue()!=null) {
                     String interestSelected=dataSnapshot.child("choiceSelected").getValue().toString();
                     if (interestSelected != "true") {
-                        Intent appMainPage_intent = new Intent(AppMainPage.this, Interest_Part.class);
-                        appMainPage_intent.putExtra("mobileText", mobileText);
-                        startActivity(appMainPage_intent);
+                        Intent interest_intent = new Intent(AppMainPage.this, Interest_Part.class);
+                        interest_intent.putExtra("mobileText", mobileText);
+                        startActivity(interest_intent);
                         finish();
                     } else {
 //                    Intent interest_intent= new Intent(AppMainPage.this, Interest_Part.class);
@@ -129,5 +131,30 @@ public class AppMainPage extends AppCompatActivity {
         MenuInflater menuInflater=getMenuInflater();
         menuInflater.inflate(R.menu.menu, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()){
+
+            case R.id.logoutMenu: {
+                Logout();
+                break;
+            }
+            case R.id.ContactUs: {
+                startActivity(new Intent(AppMainPage.this, Contact_Us.class));
+                break;
+
+            }
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void Logout(){
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(AppMainPage.this, MainActivity.class));
+        finish();
+        finishAffinity();
     }
 }
