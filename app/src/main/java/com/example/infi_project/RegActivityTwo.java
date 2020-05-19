@@ -135,6 +135,7 @@ public class RegActivityTwo extends AppCompatActivity {
                         public void onCancelled(@NonNull DatabaseError databaseError) {
                             Log.d("Tag", databaseError.getMessage());
 
+
                         }
                     };
                     mobileNoRef.addListenerForSingleValueEvent(eventListener);
