@@ -136,6 +136,7 @@ public class RegActivityTwo extends AppCompatActivity implements DatePickerDialo
                         public void onCancelled(@NonNull DatabaseError databaseError) {
                             Log.d("Tag", databaseError.getMessage());
 
+
                         }
                     };
                     mobileNoRef.addListenerForSingleValueEvent(eventListener);

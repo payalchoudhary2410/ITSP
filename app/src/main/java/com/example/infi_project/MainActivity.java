@@ -140,11 +140,11 @@ public class MainActivity extends AppCompatActivity {
                         next.setEnabled(false);
                         optEnter.setVisibility(View.GONE);
                         progressBar.setVisibility(View.VISIBLE);
-                        state.setText("Logging in");
+                        state.setText("Verfying OTP");
                         state.setVisibility(View.VISIBLE);
                         otpCode = optEnter.getText().toString();
                         if(otpCode.isEmpty()){
-                            optEnter.setError("Required");
+                            optEnter.setError("OTP Required");
                             return;
                         }
 
@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 }else {
-                    phone.setError("Valid Phone Required");
+                    phone.setError("Valid Phone Number Required");
                 }
             }
         });
