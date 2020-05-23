@@ -78,7 +78,7 @@
         android:layout_width="113dp"
         android:layout_height="46dp"
         android:layout_marginTop="75dp"
-        android:text="Sign Up2"
+        android:text="Sign Up"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dob" />
@@ -112,16 +112,17 @@
         app:layout_constraintTop_toBottomOf="@+id/logInPage" />
 
 
-
-    <EditText
+    <TextView
         android:id="@+id/dob"
         android:layout_width="235dp"
         android:layout_height="51dp"
         android:layout_marginStart="92dp"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:hint="DOB"
-        android:inputType="date"
+        android:hint="Select Your DOB"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="normal"
+        android:translationZ="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iitbroll" />
 
@@ -154,16 +155,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="90dp" />
-
-    <Button
-        android:id="@+id/temporary_button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:text="Temporary2"
-        app:layout_constraintStart_toEndOf="@+id/signupBtn"
-        app:layout_constraintTop_toBottomOf="@+id/tnc" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

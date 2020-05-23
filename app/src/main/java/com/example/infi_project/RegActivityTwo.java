@@ -3,12 +3,14 @@ package com.example.infi_project;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,15 +24,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Calendar;
 import java.util.Vector;
 
-public class RegActivityTwo extends AppCompatActivity {
+public class RegActivityTwo extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
 
-    public EditText username, password, email,mobileNo,iitbRollNo,dob;
+    public EditText username, password, email,mobileNo,iitbRollNo;
     public CheckBox tnc;
     public Button submitBtn;
-    public Button tempBtn;
-    public TextView logIn, contactUs,tncStatement;
+    public TextView logIn, contactUs,tncStatement,dob;
 
     public String usernameText, passwordText, emailText, mobileNoText, iitbRollNoText, dobText;
     public Vector userInterest=new Vector();
@@ -49,7 +51,7 @@ public class RegActivityTwo extends AppCompatActivity {
         email=(EditText)findViewById(R.id.email);
         //mobileNo=(EditText)findViewById(R.id.phone);
         iitbRollNo=(EditText)findViewById(R.id.iitbroll);
-        dob=(EditText)findViewById(R.id.dob);
+        dob=findViewById(R.id.dob);
 
 
 
@@ -60,7 +62,6 @@ public class RegActivityTwo extends AppCompatActivity {
         tncStatement=findViewById(R.id.tnc);
 
         submitBtn=findViewById(R.id.signupBtn);
-        tempBtn=findViewById(R.id.temporary_button2);
 
 
         usernameText=username.getText().toString();
@@ -163,6 +164,7 @@ public class RegActivityTwo extends AppCompatActivity {
 
         loginSetListener();
         contactSetListener();
+        dobOnClickListener();
     }
 
     public void loginSetListener(){
@@ -199,8 +201,40 @@ public class RegActivityTwo extends AppCompatActivity {
 //        });
 //    }
 
+    private void dobOnClickListener(){
+        dob.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDatePickerDialog();
 
+            }
+        });
 
+    }
 
+    public void showDatePickerDialog(){
+        DatePickerDialog datePickerDialog=new DatePickerDialog(
+                this,
+                this,
+                Calendar.getInstance().get(Calendar.YEAR),
+                Calendar.getInstance().get(Calendar.MONTH),
+                Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
 
+        );
+        datePickerDialog.show();
+    }
+    @Override
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        String dobFromCalendar=dayOfMonth+"/"+(month+1)+"/"+year;
+        dob.setText(dobFromCalendar);
+        dob.setTranslationZ(0.0f);
+    }
+
+    @Override
+    public void onBackPressed() {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(RegActivityTwo.this, MainActivity.class));
+        finishAffinity();
+        finish();
+    }
 }
