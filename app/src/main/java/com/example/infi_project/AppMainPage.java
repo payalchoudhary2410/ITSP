@@ -157,4 +157,10 @@ public class AppMainPage extends AppCompatActivity {
         finish();
         finishAffinity();
     }
+
+    public String sendData(){
+        return mobileText;
+    }
+
+
 }
