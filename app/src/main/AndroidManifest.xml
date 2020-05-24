@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".RegActivity" />
         <activity android:name=".MobileOtp" />
         <activity android:name=".RegActivityTwo" />
         <activity android:name=".AppMainPage" />
