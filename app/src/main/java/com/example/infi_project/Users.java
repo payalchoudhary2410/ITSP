@@ -2,7 +2,7 @@ package com.example.infi_project;
 
 import java.util.Vector;
 
-class Users {
+public class Users {
 
 
 
@@ -13,12 +13,13 @@ class Users {
     String rollno;
     String pass;
     boolean choiceSelected;
-    Vector userInterest=new Vector();
+    public Vector userInterest=new Vector();
+    public  int totalNoOfInterest;
 
     public Users() {
     }
 
-    public Users(String userName, String userPhone, String userEmail, String dateofBirth, String rollno, String pass, boolean choiceSelected, Vector userInterest) {
+    public Users(String userName, String userPhone, String userEmail, String dateofBirth, String rollno, String pass, boolean choiceSelected, Vector userInterest,int totalNoOfInterest) {
         this.userName = userName;
         this.userPhone = userPhone;
         this.userEmail = userEmail;
@@ -27,6 +28,7 @@ class Users {
         this.pass = pass;
         this.choiceSelected=choiceSelected;
         this.userInterest=userInterest;
+        this.totalNoOfInterest=totalNoOfInterest;
     }
 
     public String getUserName() {
@@ -91,5 +93,13 @@ class Users {
 
     public void setUserInterest(Vector userInterest) {
         this.userInterest = userInterest;
+    }
+
+    public int getTotalNoOfInterest() {
+        return totalNoOfInterest;
+    }
+
+    public void setTotalNoOfInterest(int totalNoOfInterest) {
+        this.totalNoOfInterest = totalNoOfInterest;
     }
 }

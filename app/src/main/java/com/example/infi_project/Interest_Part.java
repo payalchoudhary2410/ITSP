@@ -117,18 +117,20 @@ public class Interest_Part extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         final int[] interestUploaded = {0};
-
+                        int totalNoInterestSelected=0;
                         for (int i=1; i<22; i++){
                             final String b= "ig"+i;
                             Interest interestDetails= new Interest("qw",mobileText);
                             if (selectigButton[i]){
                                 interests.child(b).child(mobileText).setValue(interestDetails);
                                 userInterest.add(b);
+                                totalNoInterestSelected++;
                             }
                         }
 
                         user.child(mobileText).child("choiceSelected").setValue(true);
                         user.child(mobileText).child("userInterest").setValue(userInterest);
+                        user.child(mobileText).child("totalNoOfInterest").setValue(totalNoInterestSelected);
 
                         Intent appMainPage_intent = new Intent(Interest_Part.this, AppMainPage.class);
                         appMainPage_intent.putExtra("mobileText", mobileText);
