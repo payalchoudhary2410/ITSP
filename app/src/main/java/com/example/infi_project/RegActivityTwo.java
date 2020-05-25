@@ -237,4 +237,9 @@ public class RegActivityTwo extends AppCompatActivity implements DatePickerDialo
         finishAffinity();
         finish();
     }
+
+    public String sendData(){
+        return mobileNoText;
+    }
+
 }
