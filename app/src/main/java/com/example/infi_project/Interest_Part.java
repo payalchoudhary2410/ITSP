@@ -3,15 +3,20 @@ package com.example.infi_project;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.example.infi_project.data.Interest;
@@ -33,6 +38,7 @@ public class Interest_Part extends AppCompatActivity {
     public Vector userInterest=new Vector();
 
     public Toolbar toolbar;
+    public ScrollView interest_scrollpart;
 
 
 
@@ -46,6 +52,8 @@ public class Interest_Part extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interest__part);
+
+        interest_scrollpart=findViewById(R.id.scrollContent);
 
         toolbar=findViewById(R.id.myToolBar);
         setSupportActionBar(toolbar);
@@ -130,13 +138,30 @@ public class Interest_Part extends AppCompatActivity {
 
                         user.child(mobileText).child("choiceSelected").setValue(true);
                         user.child(mobileText).child("userInterest").setValue(userInterest);
-                        user.child(mobileText).child("totalNoOfInterest").setValue(totalNoInterestSelected);
+                        user.child(mobileText).child("totalNoOfInterest").setValue(totalNoInterestSelected).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+//                                Intent appMainPage_intent = new Intent(Interest_Part.this, AppMainPage.class);
+//                                appMainPage_intent.putExtra("mobileText", mobileText);
+                                Toast.makeText(Interest_Part.this, "Interest added successfully", Toast.LENGTH_SHORT).show();
+//                        startActivity(appMainPage_intent);
+//                                finish();
+                                interest_scrollpart.setVisibility(View.GONE);
+                                subBtn.setVisibility(View.GONE);
+                                FrameLayout profileImageFragmentContainer= findViewById(R.id.profileImageFragmentContainer);
+                                profileImageFragmentContainer.setVisibility(View.VISIBLE);
 
-                        Intent appMainPage_intent = new Intent(Interest_Part.this, AppMainPage.class);
-                        appMainPage_intent.putExtra("mobileText", mobileText);
-                        Toast.makeText(Interest_Part.this, "Interest added successfully", Toast.LENGTH_SHORT).show();
-                        startActivity(appMainPage_intent);
-                        finish();
+                                FragmentManager profileImageFragmentManager=getSupportFragmentManager();
+                                FragmentTransaction fragmentTransaction =profileImageFragmentManager.beginTransaction();
+
+                                ProfileImageCaptureFragment profileImageCaptureFragment= new ProfileImageCaptureFragment();
+                                fragmentTransaction.add(R.id.profileImageFragmentContainer, profileImageCaptureFragment, null);
+                                Log.d("Frag", "this");
+                                fragmentTransaction.commit();
+                            }
+                        });
+
+
 
 //                        else{
 //                            Toast.makeText(Interest_Part.this, interestUploaded[0] +"Connectivity Problem", Toast.LENGTH_LONG).show();
@@ -179,5 +204,10 @@ public class Interest_Part extends AppCompatActivity {
         startActivity(new Intent(Interest_Part.this, MainActivity.class));
         finishAndRemoveTask();
     }
+
+    public String sendData(){
+        return mobileText;
+    }
+
 
 }

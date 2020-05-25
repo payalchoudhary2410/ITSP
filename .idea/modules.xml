@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/InFi.iml" filepath="$PROJECT_DIR$/.idea/InFi.iml" />
       <module fileurl="file://$PROJECT_DIR$/Infi_Project.iml" filepath="$PROJECT_DIR$/Infi_Project.iml" group="Infi_Project" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/android_app_dev.iml" filepath="$PROJECT_DIR$/.idea/android_app_dev.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Infi_Project/app" />
     </modules>
   </component>
