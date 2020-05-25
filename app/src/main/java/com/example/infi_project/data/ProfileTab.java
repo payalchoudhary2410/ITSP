@@ -86,6 +86,7 @@ public class ProfileTab extends Fragment {
 
 
 
+
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
                 Fragment newFragment = new ProfileImagePicker();
                 transaction.add(R.id.fragment_container,newFragment,null);
