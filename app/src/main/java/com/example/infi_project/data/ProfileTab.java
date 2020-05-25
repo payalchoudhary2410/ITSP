@@ -71,6 +71,7 @@ public class ProfileTab extends Fragment {
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         fragmentManager=getFragmentManager();
 
+
         prof.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
