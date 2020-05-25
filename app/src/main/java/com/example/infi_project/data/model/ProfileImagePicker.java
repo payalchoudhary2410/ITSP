@@ -54,10 +54,9 @@ public class ProfileImagePicker extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Toast.makeText(getContext(), "Meow", Toast.LENGTH_SHORT).show();
 
-        AppMainPage activity= (AppMainPage) getActivity();
-        mobileText=activity.sendData();
+
+
 
     }
 
@@ -65,18 +64,25 @@ public class ProfileImagePicker extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+
         return inflater.inflate(R.layout.fragment_profile_image_picker, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
+        Toast.makeText(getContext(), "Meow", Toast.LENGTH_SHORT).show();
+
+        AppMainPage activity= (AppMainPage) getActivity();
+        mobileText=activity.sendData();
+
         Edit=getView().findViewById(R.id.edit);
         Remove=getView().findViewById(R.id.remove);
         profile=getView().findViewById(R.id.ImageProfile);
 
         RootRef= FirebaseDatabase.getInstance().getReference();
-        userProfileImagesReference= FirebaseStorage.getInstance().getReference().child("Profile Images");
+        userProfileImagesReference= FirebaseStorage.getInstance().getReference().child("ProfileImages");
 
 
 
@@ -140,7 +146,7 @@ public class ProfileImagePicker extends Fragment {
                                     public void onSuccess(Uri uri) {
                                         final String downloadUrl = uri.toString();
 
-                                        RootRef.child("Users").child(mobileText).child("image")
+                                        RootRef.child("userDetails").child(mobileText).child("image")
                                                 .setValue(downloadUrl)
                                                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                                                     @Override
