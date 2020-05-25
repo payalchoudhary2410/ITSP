@@ -26,6 +26,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+
 
 public class AppMainPage extends AppCompatActivity {
 
@@ -35,6 +37,7 @@ public class AppMainPage extends AppCompatActivity {
     public Toolbar toolbar;
     PagerAdapter pagerAdapter;
     ProgressBar progressBar;
+    private ArrayList<String> interestNames= new ArrayList<>();
 
     String mobileText;
 

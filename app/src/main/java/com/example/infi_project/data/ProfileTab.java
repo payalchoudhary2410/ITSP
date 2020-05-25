@@ -1,6 +1,5 @@
 package com.example.infi_project.data;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -17,7 +16,6 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import com.example.infi_project.PagerAdapter;
 import com.example.infi_project.R;
 import com.example.infi_project.data.model.ProfileImagePicker;
 import com.google.android.material.tabs.TabLayout;
@@ -78,12 +76,14 @@ public class ProfileTab extends Fragment {
         prof.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               /* cs.findViewById(R.id.linearContent);
+               /*cs.findViewById(R.id.linearContent);
                 cs.setVisibility(View.INVISIBLE);
                 fl.findViewById(R.id.fragment_container);
                 fl.setVisibility(View.VISIBLE);
 
                 */
+
+
 
 
 

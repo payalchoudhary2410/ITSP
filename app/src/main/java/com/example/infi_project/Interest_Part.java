@@ -144,12 +144,14 @@ public class Interest_Part extends AppCompatActivity {
 //                                Intent appMainPage_intent = new Intent(Interest_Part.this, AppMainPage.class);
 //                                appMainPage_intent.putExtra("mobileText", mobileText);
                                 Toast.makeText(Interest_Part.this, "Interest added successfully", Toast.LENGTH_SHORT).show();
-//                        startActivity(appMainPage_intent);
+//                                startActivity(appMainPage_intent);
 //                                finish();
+                                FrameLayout profileImageFragmentContainer= findViewById(R.id.profileImageFragmentContainer);
+
+                                profileImageFragmentContainer.setVisibility(View.VISIBLE);
+
                                 interest_scrollpart.setVisibility(View.GONE);
                                 subBtn.setVisibility(View.GONE);
-                                FrameLayout profileImageFragmentContainer= findViewById(R.id.profileImageFragmentContainer);
-                                profileImageFragmentContainer.setVisibility(View.VISIBLE);
 
                                 FragmentManager profileImageFragmentManager=getSupportFragmentManager();
                                 FragmentTransaction fragmentTransaction =profileImageFragmentManager.beginTransaction();

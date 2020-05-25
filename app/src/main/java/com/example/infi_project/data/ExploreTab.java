@@ -50,21 +50,6 @@ public class ExploreTab extends Fragment {
         AppMainPage activity= (AppMainPage) getActivity();
         mobileText=activity.sendData();
 
-
-
-
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_explore_tab, container, false);
-    }
-
-    @Override
-    public void onViewCreated (View view, @Nullable Bundle savedInstanceState){
-
         interestNames.add("All");
         DatabaseReference reff;
         reff= FirebaseDatabase.getInstance().getReference().child("userDetails").child(mobileText);
@@ -102,6 +87,59 @@ public class ExploreTab extends Fragment {
             }
         });
 
+
+
+
+
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_explore_tab, container, false);
+    }
+
+    @Override
+    public void onViewCreated (View view, @Nullable Bundle savedInstanceState){
+
+//        interestNames.add("All");
+//        DatabaseReference reff;
+//        reff= FirebaseDatabase.getInstance().getReference().child("userDetails").child(mobileText);
+//        reff.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                if (dataSnapshot.exists()) {
+////                    Iterable<DataSnapshot> snapshotIterator = dataSnapshot.getChildren();
+////                    Iterator<DataSnapshot> iterator = snapshotIterator.iterator();
+////                    int i = 0;
+////                    while (iterator.hasNext()) {
+////                        DataSnapshot next = (DataSnapshot) iterator.next();
+////                        interestNames.add(Objects.requireNonNull(next.getValue()).toString());
+////                        i = i + 1;
+////                    }
+//                    String interestNoText=dataSnapshot.child("totalNoOfInterest").getValue().toString();
+//                    int interestNo=Integer.parseInt(interestNoText);
+//                    for (int i=0; i<interestNo; i++){
+//                        String interestNumber= String.valueOf(i);
+//                        String interest= dataSnapshot.child("userInterest").child(interestNumber).getValue().toString();
+//                        interestNames.add(interest);
+//                    }
+//
+//                    initRecyclerView();
+//                }
+//
+//                else {
+//                    Toast.makeText(getContext(), "DataSnapshot doesn't exist", Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//            }
+//        });
+        initRecyclerView();
 
 
     }
