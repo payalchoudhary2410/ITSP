@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 
 import com.example.infi_project.AppMainPage;
@@ -31,7 +32,7 @@ import com.theartofdev.edmodo.cropper.CropImageView;
 import static android.app.Activity.RESULT_OK;
 
 
-public class ProfileImagePicker extends Fragment {
+public class ProfileImagePicker extends DialogFragment {
 
     private Button Edit;
     private Button Remove;

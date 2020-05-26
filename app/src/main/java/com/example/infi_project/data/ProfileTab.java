@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -83,6 +84,8 @@ public class ProfileTab extends Fragment {
 
                 */
 
+                ProfileImagePicker myDialogFragment= new ProfileImagePicker();
+                myDialogFragment.show(getFragmentManager(),"MyFragment");
 
 
 
@@ -91,7 +94,7 @@ public class ProfileTab extends Fragment {
 
 
 
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
+               /* FragmentTransaction transaction = fragmentManager.beginTransaction();
                 Fragment newFragment = new ProfileImagePicker();
                 transaction.add(R.id.fragment_container,newFragment,null);
 
@@ -104,6 +107,8 @@ public class ProfileTab extends Fragment {
 
                     // Commit the transaction
                 transaction.commit();
+
+                */
 
 
 
