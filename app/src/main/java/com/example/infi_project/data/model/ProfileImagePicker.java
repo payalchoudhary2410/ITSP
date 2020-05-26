@@ -132,6 +132,8 @@ public class ProfileImagePicker extends DialogFragment {
 
                 Uri resultUri = result.getUri();
 
+                //Meow
+
 
 
                 StorageReference filePath = userProfileImagesReference.child(mobileText + ".jpg");
