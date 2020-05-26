@@ -73,6 +73,8 @@ public class ProfileImagePicker extends DialogFragment {
 
         Toast.makeText(getContext(), "Meow", Toast.LENGTH_SHORT).show();
 
+
+
         AppMainPage activity= (AppMainPage) getActivity();
         mobileText=activity.sendData();
 
@@ -89,9 +91,11 @@ public class ProfileImagePicker extends DialogFragment {
             @Override
             public void onClick(View v) {
                 Intent galleryIntent = new Intent();
-                galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
                 galleryIntent.setType("image/*");
+                galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
+
                 startActivityForResult(galleryIntent,galleryPick);
+                dismiss();
 
 
             }
@@ -102,6 +106,7 @@ public class ProfileImagePicker extends DialogFragment {
             public void onClick(View v) {
                 Drawable mDrawable=getResources().getDrawable(R.drawable.profile_image);
                 profile.setImageDrawable(mDrawable);
+                dismiss();
             }
         });
 
@@ -120,6 +125,7 @@ public class ProfileImagePicker extends DialogFragment {
             CropImage.activity()
                     .setGuidelines(CropImageView.Guidelines.ON)
                     .setAspectRatio(1,1)
+
                     .start(getContext(),this);
 
         }

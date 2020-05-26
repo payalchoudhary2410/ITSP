@@ -95,6 +95,7 @@ public class RegActivityTwo extends AppCompatActivity implements DatePickerDialo
                 mobileNoText=regIntent.getStringExtra("mobileText");
                 iitbRollNoText=iitbRollNo.getText().toString();
                 dobText=dob.getText().toString();
+                final String ur=null;
 
                 if (usernameText.isEmpty() || passwordText.isEmpty() || emailText.isEmpty() || dobText.isEmpty() || mobileNoText.isEmpty() || iitbRollNoText.isEmpty()) {
                     Toast.makeText(RegActivityTwo.this, "Please Enter All the Details",Toast.LENGTH_LONG).show();
@@ -110,7 +111,7 @@ public class RegActivityTwo extends AppCompatActivity implements DatePickerDialo
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             if (!dataSnapshot.exists()){
-                                Users userDetail = new Users(usernameText, mobileNoText, emailText, dobText, iitbRollNoText, passwordText, false,userInterest,0);
+                                Users userDetail = new Users(usernameText, mobileNoText, emailText, dobText, iitbRollNoText, passwordText, false,userInterest,0,ur);
                                 reference.child(mobileNoText).setValue(userDetail).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
