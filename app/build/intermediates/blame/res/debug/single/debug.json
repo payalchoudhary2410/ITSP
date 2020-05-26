@@ -1,0 +1,294 @@
+[
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_learningimage.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\learningimage.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\menu\\menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_musicimage.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\musicimage.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_healthandwellnessimage.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\healthandwellnessimage.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\font_alegreya_sans_black_italic.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\font\\alegreya_sans_black_italic.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_careerandbusinessimage.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\careerandbusinessimage.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_app_main_page.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\layout\\activity_app_main_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_writingimage.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\writingimage.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_reg.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\layout\\activity_reg.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_logogmail.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\logogmail.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\layout_toolbar.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\layout\\toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_profile_tab.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\layout\\fragment_profile_tab.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_socialimage.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\socialimage.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\layout_interestlist.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\layout\\interestlist.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_contact__us.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\layout\\activity_contact__us.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_back0.jpg.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\back0.jpg"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_logo.jpg.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\logo.jpg"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_profile_image_capture.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\layout\\fragment_profile_image_capture.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable_payal.jpg.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable\\payal.jpg"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_fooddrinksimage.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\fooddrinksimage.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_languageimage.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\languageimage.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_reg_two.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\layout\\activity_reg_two.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_scifiandgamesimage.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\scifiandgamesimage.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_profile_image_picker.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\layout\\fragment_profile_image_picker.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_outdooradventuretravelimage.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\outdooradventuretravelimage.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_logowhatsapp.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\logowhatsapp.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_danceimage.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\danceimage.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_literatureimage.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\literatureimage.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\menu_menuforinterest.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\menu\\menuforinterest.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_booksimage.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\booksimage.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_explore_tab.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\layout\\fragment_explore_tab.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_interest__part.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\layout\\activity_interest__part.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_filmimage.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\filmimage.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_tech.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\tech.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_tick.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\tick.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_fashionimage.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\fashionimage.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_profile_all.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\layout\\fragment_profile_all.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_feed_tab.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\layout\\fragment_feed_tab.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_registration.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\layout\\activity_registration.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable_roundbuttontwo.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable\\roundbuttontwo.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_back.jpg.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\back.jpg"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pictures.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable\\pictures.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_highlights_profile.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\layout\\fragment_highlights_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_logophone.jpg.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\logophone.jpg"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\font_amarante.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\font\\amarante.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_chat_tab.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\layout\\fragment_chat_tab.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_cultureimage.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\cultureimage.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_group_black_24dp.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable\\ic_group_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_mobile_otp.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\layout\\activity_mobile_otp.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_whatsapplogo.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\whatsapplogo.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_sportsandfitnessimage.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\sportsandfitnessimage.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_petsimage.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\petsimage.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_photographyimage.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\photographyimage.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounbutton.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable\\rounbutton.xml"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_profile_image.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\profile_image.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_artandcraftimage.png.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable-v24\\artandcraftimage.png"
+    },
+    {
+        "merged": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gradient.xml.flat",
+        "source": "C:\\Users\\91728\\AndroidStudioProjects\\InFi\\app\\src\\main\\res\\drawable\\gradient.xml"
+    }
+]
