@@ -133,6 +133,7 @@ public class ProfileImagePicker extends DialogFragment {
                 Uri resultUri = result.getUri();
 
 
+
                 StorageReference filePath = userProfileImagesReference.child(mobileText + ".jpg");
 
                 filePath.putFile(resultUri)
