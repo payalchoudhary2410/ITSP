@@ -3,6 +3,7 @@ package com.example.infi_project;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
@@ -18,6 +19,7 @@ import com.example.infi_project.data.ChatTab;
 import com.example.infi_project.data.ExploreTab;
 import com.example.infi_project.data.FeedTab;
 import com.example.infi_project.data.ProfileTab;
+import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -39,7 +41,14 @@ public class AppMainPage extends AppCompatActivity {
     ProgressBar progressBar;
     private ArrayList<String> interestNames= new ArrayList<>();
 
+    //Drawer
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+
+
     String mobileText;
+
+    //Menu Hooks
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -933,6 +933,7 @@ color material_on_primary_emphasis_medium
 color material_on_surface_disabled
 color material_on_surface_emphasis_high_type
 color material_on_surface_emphasis_medium
+color meow
 color mtrl_bottom_nav_colored_item_tint
 color mtrl_bottom_nav_colored_ripple_color
 color mtrl_bottom_nav_item_tint
@@ -1742,6 +1743,8 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable infi
+drawable infii
 drawable languageimage
 drawable learningimage
 drawable literatureimage
@@ -1886,6 +1889,7 @@ id centerInside
 id center_horizontal
 id center_vertical
 id chains
+id check
 id checkBoxTnC
 id checkbox
 id checked
@@ -1901,7 +1905,7 @@ id codeEnter1
 id code_tv
 id collapseActionView
 id confirm_button
-id connect
+id connects
 id contact
 id contactReg
 id container
@@ -1937,6 +1941,7 @@ id dimensions
 id direct
 id disableHome
 id dob
+id drawer_layout
 id dropdown_menu
 id edit
 id edit_query
@@ -2024,6 +2029,7 @@ id left
 id light
 id line1
 id line3
+id lineContent
 id linearContent
 id listMode
 id list_item
@@ -2032,6 +2038,7 @@ id logoutMenu
 id masked
 id media_actions
 id message
+id messages
 id middle
 id mini
 id mobileNo
@@ -2065,7 +2072,14 @@ id multiply
 id myAppbar
 id myToolBar
 id name
+id nav_explore
+id nav_explre
+id nav_hom
+id nav_home
+id nav_searc
+id nav_search
 id navigation_header_container
+id navigation_view
 id never
 id nextBtn
 id nextBtn1
@@ -2083,6 +2097,8 @@ id onDateChanged
 id onTouch
 id outline
 id oval
+id p_about
+id p_name
 id packed
 id pager
 id pager1
@@ -2119,6 +2135,7 @@ id save_overlay_view
 id scale
 id screen
 id scroll
+id scrollConten
 id scrollContent
 id scrollIndicatorDown
 id scrollIndicatorUp
@@ -2326,10 +2343,12 @@ layout fragment_explore_tab
 layout fragment_feed_tab
 layout fragment_highlights_profile
 layout fragment_profile_all
+layout fragment_profile_for_users
 layout fragment_profile_image_capture
 layout fragment_profile_image_picker
 layout fragment_profile_tab
 layout interestlist
+layout menu_header
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -2392,6 +2411,7 @@ layout text_view_without_line_height
 layout toolbar
 menu crop_image_menu
 menu menu
+menu menu_menu
 menu menuforinterest
 mipmap ic_launcher
 mipmap ic_launcher_round
