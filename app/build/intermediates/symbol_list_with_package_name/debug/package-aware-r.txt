@@ -1753,6 +1753,7 @@ drawable logogmail
 drawable logophone
 drawable logowhatsapp
 drawable marker
+drawable menuicon
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -2037,6 +2038,7 @@ id logInPage
 id logoutMenu
 id masked
 id media_actions
+id menuic
 id message
 id messages
 id middle
@@ -2079,6 +2081,7 @@ id nav_home
 id nav_searc
 id nav_search
 id navigation_header_container
+id navigation_menu
 id navigation_view
 id never
 id nextBtn

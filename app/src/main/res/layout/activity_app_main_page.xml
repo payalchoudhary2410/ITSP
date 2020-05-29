@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/meow"
+        android:id="@+id/navigation_menu"
         android:layout_gravity="start"
         app:headerLayout="@layout/menu_header"
         app:menu="@menu/menu_menu"/>
@@ -28,6 +29,11 @@
     <include
         android:id="@+id/myToolBar"
         layout="@layout/toolbar"
+
+
+
+
+
         app:layout_constraintTop_toTopOf="parent"/>
 
     <com.google.android.material.tabs.TabLayout

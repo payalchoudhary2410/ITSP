@@ -3,15 +3,18 @@ package com.example.infi_project;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -31,7 +34,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 
-public class AppMainPage extends AppCompatActivity {
+public class AppMainPage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
 
     public TabLayout tabLayout;
@@ -41,19 +44,25 @@ public class AppMainPage extends AppCompatActivity {
     ProgressBar progressBar;
     private ArrayList<String> interestNames= new ArrayList<>();
 
+    ImageView menU;
+
     //Drawer
     DrawerLayout drawerLayout;
     NavigationView navigationView;
 
 
+
+
+
     String mobileText;
 
-    //Menu Hooks
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app_main_page);
+
 
         toolbar=findViewById(R.id.myToolBar);
         tabLayout=findViewById(R.id.tabLayout);
@@ -64,6 +73,29 @@ public class AppMainPage extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Infi");
+
+
+        //Menu Hooks
+        drawerLayout=findViewById(R.id.drawer_layout);
+        navigationView=findViewById(R.id.navigation_menu);
+
+        navigationView.bringToFront();
+        navigationView.setNavigationItemSelectedListener(this);
+        menU=findViewById(R.id.menuic);
+
+        menU.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(drawerLayout.isDrawerVisible(GravityCompat.START)){
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                }
+                else{
+                    drawerLayout.openDrawer(GravityCompat.START);
+                }
+            }
+        });
+
+
 
 
         tabLayout.setupWithViewPager(viewPager);
@@ -175,4 +207,18 @@ public class AppMainPage extends AppCompatActivity {
     }
 
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        if(drawerLayout.isDrawerVisible(GravityCompat.START))
+            drawerLayout.closeDrawer(GravityCompat.START);
+        else
+        super.onBackPressed();
+    }
 }
+
